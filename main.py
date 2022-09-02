@@ -1,4 +1,5 @@
-#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+from art import logo
+
 def encrypt(message, shift):
   result = []
   for i in message:
@@ -27,6 +28,7 @@ def decrypt(message, shift):
       result.append(" ")
   return ''.join(result)
 
+print(logo)
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
