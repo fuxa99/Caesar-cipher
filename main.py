@@ -27,7 +27,10 @@ def decrypt(message, shift):
       result.append(" ")
   return ''.join(result)
 
-  
-#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
-print(encrypt("hello world!",9))
-print(decrypt("qnuux gxbum!",9))
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+if direction == "encode":  
+  print(encrypt(text,shift))
+else:
+  print(decrypt(text,shift))
